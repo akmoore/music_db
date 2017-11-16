@@ -1,5 +1,10 @@
-<h1>New Artist</h1>
+<h1 class="text-center" style="margin-bottom: 30px;">New Artist</h1>
 
-<%= render 'form', artist: @artist %>
+<div class="col-md-8 col-md-offset-2">
+    <%= render 'form', artist: @artist %>
+</div>
 
-<%= link_to 'Back', artists_path %>
+<div class="col-md-8 col-md-offset-2">
+    <%= link_to 'Back', artists_path, class: 'btn btn-default' %>
+</div>
+

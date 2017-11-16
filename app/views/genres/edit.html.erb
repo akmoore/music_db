@@ -1,6 +1,10 @@
-<h1>Editing Genre</h1>
+<h1 class="text-center" style="margin-bottom: 30px;">Editing Genre</h1>
 
-<%= render 'form', genre: @genre %>
+<div class="col-md-8 col-md-offset-2">
+    <%= render 'form', genre: @genre %>
+</div>
 
-<%= link_to 'Show', @genre %> |
-<%= link_to 'Back', genres_path %>
+<div class="col-md-8 col-md-offset-2">
+    <%= link_to 'Show', @genre, class: 'btn btn-info' %> |
+    <%= link_to 'Back', genres_path, class: 'btn btn-default' %>
+</div>

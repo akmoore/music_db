@@ -1,5 +1,9 @@
-<h1>New Genre</h1>
+<h1 class="text-center" style="margin-bottom: 30px;">New Genre</h1>
+<div class="col-md-8 col-md-offset-2">
+    <%= render 'form', genre: @genre %>
+</div>
 
-<%= render 'form', genre: @genre %>
+<div class="col-md-8 col-md-offset-2">
+    <%= link_to 'Back', genres_path, class: 'btn btn-default' %>
+</div>
 
-<%= link_to 'Back', genres_path %>

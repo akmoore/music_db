@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :song_name %>
+  <div class="field form-group">
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :name, id: :song_name, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :artist_id %>
-    <%= form.text_field :artist_id, id: :song_artist_id %>
+  <div class="field form-group">
+    <%= form.label :artist_id, class: 'form-label' %>
+    <%# form.text_field :artist_id, id: :song_artist_id %>
+    <%= form.collection_select :artist_id, Artist.all, :id, :name, {:prompt => 'Select Artist'}, {class: 'form-control'} %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-success' %>
   </div>
 <% end %>

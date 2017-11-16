@@ -11,17 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :artist_name %>
+  <div class="form-group">
+    <%= form.label :name, class: 'control-label' %>
+    <%= form.text_field :name, id: :artist_name, class: 'form-control', placeholder: 'Name' %>
   </div>
 
-  <div class="field">
-    <%= form.label :genre_id %>
-    <%= form.text_field :genre_id, id: :artist_genre_id %>
+  <div class="form-group">
+    <%= form.label :genre_id, class: 'control-label' %>
+    <%# form.text_field :genre_id, id: :artist_genre_id, class: 'form-control', placeholder: 'Genre' %>
+    <%= form.collection_select :genre_id, Genre.all, :id, :name, {:prompt => 'Select Genre'}, {class: 'form-control'} %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: 'btn btn-success' %>
   </div>
 <% end %>
